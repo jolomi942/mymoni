@@ -1,11 +1,12 @@
 import { useCallback,useState, useEffect } from "react";
-import{View, Text} from "react-native";
+import{View, Text, Image} from "react-native";
 import{styles} from "../styles/homescreen";
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 import { Lobster_400Regular } from "@expo-google-fonts/lobster";
 import { Philosopher_700Bold } from "@expo-google-fonts/philosopher";
 import { SafeArea } from "../utilities/AreaView";
+
 
 export function HomeScreen(){
     const [appIsReady, setAppIsReady] = useState(false);
@@ -41,8 +42,16 @@ export function HomeScreen(){
 
     return (
         <SafeArea>
-            <Text style={styles.title}>Home</Text>
+            <View style={styles.nav}>
+              <Text style={styles.brandName}> mymoni</Text>
+              <View style={styles.profile}>
+                <Image 
+                source={require('../assets/profile-pix.jpeg')}
+                style={styles.profilePix}/>
+              </View>
+            </View>
         </SafeArea>
     )
     
 }
+
