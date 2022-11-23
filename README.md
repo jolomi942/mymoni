@@ -1,5 +1,4 @@
 # mymoni
-# mymoni
 
 PROBLEMS
 1. Managing their finance
