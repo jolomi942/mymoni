@@ -42,12 +42,43 @@ export function HomeScreen(){
 
     return (
         <SafeArea>
+          <View style={styles.container}>
             <View style={styles.nav}>
               <Text style={styles.brandName}> mymoni</Text>
               <View style={styles.profile}>
                 <Image 
                 source={require('../assets/profile-pix.jpeg')}
                 style={styles.profilePix}/>
+              </View>
+            </View>
+            
+            <View style={styles.homeContent}>
+              <View style={styles.tipBlock}>
+                <Text style={styles.tipDate}>12 June 2012</Text>
+                <View style={styles.tipDetails}>
+                  
+                <View style={styles.tipTextBlock}>
+
+                  <Text style={styles.tip}>
+                  Google LLC is an American multinational technology company 
+                  focusing on search engine technology, online advertising, 
+                  
+                  </Text>
+                  </View>
+                  <Image style={styles.tipImage} source={require('../assets/pexels-cottonbro-studio-3943715.jpg')}/>
+                </View>
+                <Text style={styles.previousTipsText}></Text>
+
+              </View>
+              <View style={styles.fileTrans}>
+              
+              </View>
+              <View style={styles.upcoming}>
+
+              </View>
+              <View style={styles.quizes}>
+
+              </View>
               </View>
             </View>
         </SafeArea>

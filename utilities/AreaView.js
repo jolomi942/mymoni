@@ -1,6 +1,7 @@
 import { SafeAreaView, Platform, StatusBar,StyleSheet } from "react-native";
 
 
+
 export function SafeArea({children}){
     return (
         <SafeAreaView style={styles.container}>
@@ -12,6 +13,7 @@ export function SafeArea({children}){
 
 const styles=StyleSheet.create({
     container:{
-        backgroundColor:"grey"
+    flex:1,
+    marginTop:Platform.OS === 'android'? StatusBar.currentHeight: null
     }
 })
