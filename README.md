@@ -52,3 +52,5 @@ SCREENS
 - Pay 
 
 Home Screen [navbar,tip for the day, file an expense/earning,upcoming events,projection, favourites]
+
+https://www.pexels.com/photo/person-putting-coin-in-a-piggy-bank-3943715/ https://www.pexels.com/photo/a-man-in-brown-sweatshirt-holding-a-piggy-bank-7301597/ https://www.pexels.com/photo/person-using-white-ipad-6476590/
