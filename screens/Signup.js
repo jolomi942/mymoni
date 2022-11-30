@@ -1,18 +1,18 @@
 import { SafeArea } from '../utilities/AreaView';
 import { View, Text, TextInput} from 'react-native';
 import { Button } from 'react-native-paper';
-import { styles } from '../styles/homescreen';
+import { SignUpstyle} from '../styles/SignUp'
 
 
 export function Signup ({navigation}){
     return (
-        <SafeArea style={styles.container}>
-            <View style={styles.brand}>
-                <Text style={styles.brandName}>mymoni</Text>
+        <SafeArea style={SignUpstyle.container}>
+            <View style={SignUpstyle.brand}>
+                <Text style={SignUpstyle.brandName}>mymoni</Text>
                 <Text>Create your account</Text>
             </View>
 
-            <View style={styles.input}>
+            <View style={SignUpstyle.input}>
                 <View style={{marginVertical:10}}>
                     <Text>First Name</Text>
                     <TextInput placeholder='John' style={{borderColor:'black', border:5, width:20, height: 20}}></TextInput>

@@ -15,7 +15,7 @@ export const styles=StyleSheet.create({
    input:{
       marginVertical: 20,
       alignItems: 'center',
-      fontFamily: 'Lobster_400Regular'
+      fontFamily: ''
 
    },
    brandName:{
