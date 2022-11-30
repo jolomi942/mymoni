@@ -5,12 +5,24 @@ export const styles=StyleSheet.create({
    container:{
       flex:1,
       paddingHorizontal:8,
-    
+   
+   },
+   brand:{
+      alignItems: 'center',
+      justifyContent: 'center'
+   },
+   
+   input:{
+      marginVertical: 20,
+      alignItems: 'center',
+      fontFamily: 'Lobster_400Regular'
+
    },
    brandName:{
-      fontFamily:"lobster_400Rrgular",
+      fontFamily:'Lobster_400Regular',
       fontSize:Theme.fonts.fontSizePoint.h3,
-      color:Theme.colors.purple500
+      color:Theme.colors.purple500,
+      textAlign: 'center'
    },
    nav:{
       flexDirection:"row",
