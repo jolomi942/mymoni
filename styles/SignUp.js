@@ -1,10 +1,10 @@
 import { StyleSheet } from "react-native";
-import { Theme } from "../themes/Theme";
+import { Theme } from "../themes/theme";
 
 export const SignUpstyle=StyleSheet.create({
    container:{
       flex:1,
-      paddingHorizontal:8,
+      paddingHorizontal:1,
    
    },
    brand:{
@@ -13,14 +13,14 @@ export const SignUpstyle=StyleSheet.create({
    },
    
    input:{
-      marginVertical: 20,
+      marginVertical: 2,
       alignItems: 'center',
       fontFamily: ''
 
    },
    brandName:{
       fontFamily:'Lobster_400Regular',
-      fontSize:Theme.fonts.fontSizePoint.h3,
+      fontSize:Theme.fonts.fontSizePoint.h2,
       color:Theme.colors.purple500,
       textAlign: 'center'
    }})
