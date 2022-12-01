@@ -16,6 +16,8 @@ import { History } from '../screens/History';
 import { Ionicons } from '@expo/vector-icons';
 
 
+
+
 //update theme.js
 //update homescreen.js
 //create folder "carousel" in assets
@@ -23,7 +25,7 @@ import { Ionicons } from '@expo/vector-icons';
 //add assets/carousel/never_give_up.jpg
 //update Homescreen.js
 
-function HomeScreen(){
+function HomeScreen({navigation}){
     const [appIsReady, setAppIsReady] = useState(false);
 
     useEffect(() => {
@@ -80,11 +82,11 @@ function HomeScreen(){
           <View style={styles.transact}>
             <TouchableOpacity style={styles.income}>
               <FontAwesomeIcon size={Theme.fonts.fontSizePoint.h4} icon={faCirclePlus} color={Theme.colors.yellowAltGreen}/>
-              <Text style={styles.incomeText}>Income</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.expense}>
+                <Text style={styles.incomeText}>Income</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity style={styles.expense}>
               <FontAwesomeIcon size={Theme.fonts.fontSizePoint.h4} icon={faCirclePlus} color={Theme.colors.yellowAltRed}/>
-              <Text style={styles.expenseText}>Expense</Text>
+                <Text style={styles.expenseText}>Expense</Text>
             </TouchableOpacity>
           </View>
 
@@ -99,7 +101,8 @@ function HomeScreen(){
               <Text style={styles.quizHeading}>Test your literacy</Text>
               <Text style={styles.quizInfo}>Take test</Text>
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Quizes',
+             {userName: 'john', email: "john.gmail.com"})}>
               <FontAwesomeIcon 
               icon={faArrowRight} 
               color={Theme.colors.brown300}
