@@ -1,14 +1,15 @@
-import { createContext, useState } from "react";
+import { createContext,useState } from "react";
 
-const AppContext= createContext();
+
+const AppContext = createContext();
 
 function AppProvider ({children}){
-    //destructuring
-    const [email,setEmail]= useState('james@gmail.com');
-    const [fullName, setFullName]= useState('james Elvis');
+    // destructuring
+    const [email, setEmail] = useState('james@gmail.com');
+    const [fullName, setFullName] = useState('James Elvis');
 
     return(
-        <AppContext.Provider value={{email, setEmail, fullName, setFullName}}>
+        <AppContext.Provider value={{email,setEmail,fullName,setFullName}}>
             {children}
         </AppContext.Provider>
     )
@@ -16,6 +17,3 @@ function AppProvider ({children}){
 
 export {AppContext,AppProvider}
 
-
-
-//create context

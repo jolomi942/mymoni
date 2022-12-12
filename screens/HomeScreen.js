@@ -18,6 +18,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 
 
+
 //update theme.js
 //update homescreen.js
 //create folder "carousel" in assets
@@ -58,15 +59,16 @@ function HomeScreen({navigation}){
         <View style={styles.container}>  
           <View style={styles.header}>
             <View style={styles.nav}>
-              <View style={styles.brandOutline}><Text style={styles.brandText}>mymoni</Text></View>
+              <Text style={styles.brandText}>mymoni</Text>
               <View style={styles.profileOutline}><Image style={styles.userPix} source={require('../assets/profile-pix.jpg')}/></View>
             </View>
+            
             <View style={styles.tipOfDay}>
               <View style={styles.tipImgBlock}>
                 <Image style={styles.tipOfDayImg} source={require('../assets/piggy-bank.jpg')}/>
               </View>
               <View style={styles.tip}>
-                <Text style={styles.tipText}>By age 25, you should have saved at least 0.5x your annual expenses. The more the better. In other words, If you spend $50,000 a year, you should have about $25,000 in your savings</Text>
+                <Text style={styles.tipText}>By age 25, you should have saved at least 0.5x your annual expenses. The more the better.</Text>
                 <View style={styles.tipOptions}>
                   <TouchableOpacity>
                     <Text style={styles.preTips}>Previous tips</Text>
@@ -79,14 +81,17 @@ function HomeScreen({navigation}){
             </View>
           </View>
 
+
           <View style={styles.transact}>
-            <TouchableOpacity style={styles.income}>
+            <TouchableOpacity style={styles.income}
+            onPress={() => navigation.navigate('Add Income')}>
               <FontAwesomeIcon size={Theme.fonts.fontSizePoint.h4} icon={faCirclePlus} color={Theme.colors.yellowAltGreen}/>
-                <Text style={styles.incomeText}>Income</Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity style={styles.expense}>
+              <Text style={styles.incomeText}>Income</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.expense}
+            onPress={() => navigation.navigate('Add Expense')}>
               <FontAwesomeIcon size={Theme.fonts.fontSizePoint.h4} icon={faCirclePlus} color={Theme.colors.yellowAltRed}/>
-                <Text style={styles.expenseText}>Expense</Text>
+              <Text style={styles.expenseText}>Expense</Text>
             </TouchableOpacity>
           </View>
 
@@ -96,13 +101,17 @@ function HomeScreen({navigation}){
             source={require('../assets/carousel/never_give_up.jpg')}/>
           </View>
 
+
           <View style={styles.quizes}>
             <View style={styles.textBlock}>
               <Text style={styles.quizHeading}>Test your literacy</Text>
               <Text style={styles.quizInfo}>Take test</Text>
             </View>
-            <TouchableOpacity onPress={() => navigation.navigate('Quizes',
-             {userName: 'john', email: "john.gmail.com"})}>
+            <TouchableOpacity onPress={()=> navigation.navigate('Quizes', {
+              userName:'Jane',
+              email: 'jolomi942@gmail.com',
+              
+            })}>
               <FontAwesomeIcon 
               icon={faArrowRight} 
               color={Theme.colors.brown300}
@@ -110,6 +119,7 @@ function HomeScreen({navigation}){
             </TouchableOpacity>
           </View>
         </View>
+        
     </SafeArea>
   )
 }
@@ -140,6 +150,7 @@ export function Home(){
           tabBarActiveTintColor: Theme.colors.purple700,
           tabBarInactiveTintColor: Theme.colors.brown700
         })}
+      
       >
         <Tab.Screen name="My Home" component={HomeScreen} options={{headerShown:false}}/>
         <Tab.Screen name="Flash" component={FlashCards} />
