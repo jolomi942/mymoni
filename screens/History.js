@@ -7,7 +7,7 @@ import { Button } from 'react-native-paper';
 import { Expensetrans } from '../components/host';
 
 export function History({navigation}){
-    // const {email,setEmail,fullName} = useContext(AppContext)
+     const {email,setEmail,fullName} = useContext(AppContext)
     return(
         <SafeArea>
             <View style={styles.container}>

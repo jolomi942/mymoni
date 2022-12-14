@@ -1,89 +1,131 @@
 import { faAlignJustify } from "@fortawesome/free-solid-svg-icons";
+import { FontDisplay } from "expo-font";
 import { StyleSheet } from "react-native";
 import { Theme } from "../themes/theme";
 
 export const styles=StyleSheet.create({
-     maincontainer:{
-       backgroundColor:Theme.colors.purple500,
+     container:{
+       backgroundColor:Theme.colors.brown500,
        height:"100%",
-       width: "100%",
-       flexDirection:"row",
-       justifyContent:"space-evenly",
-       flexWrap:"wrap",
-       fontWeight: "bold",
-       fontSize: Theme.fonts.fontSizePoint.h3,
+       
+       
+       
+       
+       
      },
-     pay:{
-     textAlign:'center',
-     fontFamily: 'Lobster_400Regular',
-
-     },
-     menuBox1:{
-       backgroundColor:Theme.colors.orange500,
-         width: 180,
-         height: 80,
-         alignItems:"center",
-         justifyContent: "center",
-          borderRadius: 4,
-          marginTop:200
-          
-     },
-     
-     text1:{
-       fontSize:20
+     backgroundImage:{
+        height:4
      },
 
-     menuBox2:{
-       backgroundColor:Theme.colors.brown900,
-         width: 180,
-         height: 80,
-         alignItems:"center",
-         justifyContent: "center",
-         marginTop: 200,
-        borderRadius: 4
-         
-     },
-     
-     text2:{
-       fontSize:20
+     Pay:{
+      fontFamily:'Philosopher_700Bold',
+      fontSize:Theme.fonts.fontSizePoint.h5,
+      textAlign:'center',
+      color:Theme.colors.brown700,
      },
 
-     search:{
-     backgroundColor:Theme.colors.orange300,
-     borderRadius:50,
-     width: "80%",
-     height: 50,
-     marginHorizontal:180,
-     alignItems:'center',
+     maincontainer:{
+      flexWrap:'nowrap',
+      marginTop:'70%',
+      
+     },
+
+     bill:{
+      fontSize:Theme.fonts.fontSizePoint.h5,
+      fontFamily:'Philosopher_700Bold',
+      color:Theme.colors.brown700,
+      textAlign:"center"
+
+      
+      
+     },
+     box1:{
+      borderRadius:30,
+      margin:Theme.sizes[1],
+      marginStart:100,
+      backgroundColor:Theme.colors.brown700,
+      width:"100%",
+      height:50,
+      
+            
+     },
      
+     box2:{
+      borderRadius:30,
+      margin:Theme.sizes[1],
+      marginHorizontal:5,
+      backgroundColor:Theme.colors.brown700,
+      width:"100%",
+      height:50,
+     },
+     box3:{
+      borderRadius:30,
+      margin:Theme.sizes[1],
+      marginStart:100,
+      backgroundColor:Theme.colors.brown700,
+      width:"100%",
+      height:50,
+      
+      
+     },
+     box4:{
+      borderRadius:30,
+      margin:Theme.sizes[1],
+      marginHorizontal:5,
+      backgroundColor:Theme.colors.brown700,
+      width:"100%",
+      height:50,
+     },
+     Tbox1:{
+      textAlign:'center',
+      textAlignVertical:"center",
+      fontSize:Theme.fonts.fontSizePoint.h5,
+      fontFamily:'Philosopher_700Bold',
+      color:Theme.colors.brown500,
+      
+     },
+     Tbox2:{
+      textAlign:'center',
+      textAlignVertical:"center",
+      fontSize:Theme.fonts.fontSizePoint.h5,
+      fontFamily:'Philosopher_700Bold',
+      color:Theme.colors.brown500,
+     },
+     Tbox3:{
+      textAlign:'center',
+      textAlignVertical:"center",
+      fontSize:Theme.fonts.fontSizePoint.h5,
+      fontFamily:'Philosopher_700Bold',
+      color:Theme.colors.brown500,
+     },
+     Tbox4:{
+      textAlign:'center',
+      textAlignVertical:"center",
+      fontSize:Theme.fonts.fontSizePoint.h5,
+      fontFamily:'Philosopher_700Bold',
+      color:Theme.colors.brown500,
+
+     },
+
+     transact:{
+      flex:1,
+      flexDirection:'row',
+      marginBottom:Theme.sizes[2]
+  },
+  payment:{
+    borderRadius:30,
+    margin:Theme.sizes[1],
+    marginStart:100,
+    backgroundColor:Theme.colors.brown700,
+    width:"100%",
+    height:50,
+  },
+
+  paymentText:{
+    textAlign:'center',
+      textAlignVertical:"center",
+      fontSize:Theme.fonts.fontSizePoint.h5,
+      fontFamily:'Philosopher_700Bold',
+      color:Theme.colors.brown500,
 },
-     
-     menuBox3:{
-       backgroundColor:Theme.colors.orange300,
-         width: 130,
-         height: 80,
-         alignItems:"center",
-         justifyContent: "center",
-         marginTop: 80,
-          borderRadius: 4
-          
-     },
-     
-     text3:{
-       fontSize:20
-     },
-     menuBox4:{
-       backgroundColor:Theme.colors.brown300,
-         width: 130,
-         height: 80,
-         alignItems:"center",
-         justifyContent: "center",
-         marginTop: 80,
-        borderRadius: 4
-         
-     },
-     
-     text4:{
-       fontSize:20
-     }
      })

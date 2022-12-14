@@ -10,7 +10,11 @@ import { Theme } from '../themes/theme';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 import { authentication } from '../Firebase/firebase';
-import { createUserWithEmailAndPassword,onAuthStateChanged } from 'firebase/auth';
+import { createUserWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
+
+
+
+
 
 const Rules = yup.object({
     fName:yup.string()
@@ -69,6 +73,7 @@ export function SignUp ({navigation}){
 }
 
     return (
+      
         <SafeArea>
             <ScrollView>
 
@@ -86,16 +91,17 @@ export function SignUp ({navigation}){
                     email:'',
                     password:'',
                     passwordConfirmation:'',
-                    phoneNumber:0
+                    phoneNumber:0,
+                    userID: ""
                 }}
 
                 onSubmit={(values,actions) => {
-                    createUserWithEmailAndPassword(authentication, values.email, values.password)
+                    createUserWithEmailAndPassword(authentication, values.email, values.password, values.uid)
                     .then(()=>{
-                      onAuthStateChanged(authentication, ((user)=>{
+                      onAuthStateChanged(authentication, (user)=>{
                         console.log(user.uid)
-                      }))
-                      
+                      })
+
                     })
                     .catch((error)=>{
                       console.log(error)
@@ -194,6 +200,20 @@ export function SignUp ({navigation}){
                                     display:!touched.passwordConfirmation && !errors.passwordConfirmation ? 'none' : null
                                     }}>
                                     {touched.passwordConfirmation && errors.passwordConfirmation}
+                                </Text>
+                                </View>
+                                
+                                <View style={styles.uid}>
+                                    <Text style={styles.uID}>User ID</Text>
+                                    <TextInput style={styles.input}
+                                    multiline={true}
+                                    onChangeText={handleChange('User ID')}
+                                    onBlur={handleBlur('User ID')}
+                                    value={values.user} />
+                                <Text style={{color:'red',
+                                    display:!touched.uid && !errors.uid ? 'none' : null
+                                    }}>
+                                    {touched.uid && uid}
                                 </Text>
                                 </View>
 

@@ -1,6 +1,8 @@
 import { Lobster_400Regular } from "@expo-google-fonts/lobster";
 import { StyleSheet } from "react-native";
 import { Theme } from "../themes/theme";
+import{formik} from "formik";
+import{yup} from "yup";
 
 export const styles=StyleSheet.create({
    container:{
@@ -75,6 +77,9 @@ button2:{
     marginBottom:8
    },
    confirm:{
+    marginBottom:8
+   },
+   uid:{
     marginBottom:8
    }
    

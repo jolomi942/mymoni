@@ -108,7 +108,7 @@ function HomeScreen({navigation}){
               <Text style={styles.quizInfo}>Take test</Text>
             </View>
             <TouchableOpacity onPress={()=> navigation.navigate('Quizes', {
-              userName:'Jane',
+              userName:'Esther',
               email: 'jolomi942@gmail.com',
               
             })}>
