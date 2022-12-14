@@ -1,7 +1,6 @@
 import { useState, useEffect,useCallback } from 'react';
-import { Entypo, Feather,FontAwesome5 } from '@expo/vector-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faHeart,faCirclePlus,faArrowRight, faMagnifyingGlass, faDisplay } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { Philosopher_700Bold } from '@expo-google-fonts/philosopher';
 import { Lobster_400Regular } from '@expo-google-fonts/lobster';
 import * as SplashScreen from 'expo-splash-screen';
@@ -11,11 +10,7 @@ import { View, Text, TextInput, TouchableOpacity, Image} from 'react-native';
 import { styles } from '../styles/pay';
 import { Theme } from "../themes/theme";
 import { Button } from 'react-native-paper';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { FlashCards } from '../screens/FlashCards';
-import { Favourites } from '../screens/Favourites';
-import { History } from '../screens/History';
-import { Ionicons } from '@expo/vector-icons';
+
 
 
 export function Pay({navigation}){
