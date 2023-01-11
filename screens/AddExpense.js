@@ -39,7 +39,7 @@ export function AddExpense (){
 
                 onSubmit={(values,actions) => {
                     console.log(values.amount,values.description);
-
+                   
                     actions.resetForm(); //clear inputs
                 }}
 

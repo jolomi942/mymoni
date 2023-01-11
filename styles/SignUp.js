@@ -1,8 +1,5 @@
-import { Lobster_400Regular } from "@expo-google-fonts/lobster";
 import { StyleSheet } from "react-native";
 import { Theme } from "../themes/theme";
-import{formik} from "formik";
-import{yup} from "yup";
 
 export const styles=StyleSheet.create({
    container:{
@@ -54,33 +51,7 @@ export const styles=StyleSheet.create({
     fontFamily:'Philosopher_700Bold',
     fontSize:20
 },
-button2:{
-    fontSize:20,
-    fontFamily:'Philosopher_700Bold',
-    marginTop:10,
-    backgroundColor:Theme.colors.orange900,
-    width:320
-   },
-   firstname:{
-    marginBottom:8
-   },
-   lastname:{
-    marginBottom:8
-   },
-   phone:{
-    marginBottom:8
-   },
-   email:{
-    marginBottom:8
-   },
    password:{
     marginBottom:8
-   },
-   confirm:{
-    marginBottom:8
-   },
-   uid:{
-    marginBottom:8
-   }
-   
+   }, 
 })

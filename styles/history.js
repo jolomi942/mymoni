@@ -4,7 +4,7 @@ import { Theme } from "../themes/theme";
 export const styles= StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: 'white',
+        // backgroundColor: 'white',
     },
     transHeadLine:{
        marginTop: Theme.sizes[8]
@@ -15,29 +15,29 @@ export const styles= StyleSheet.create({
         fontSize: Theme.fonts.fontSizePoint.title,
         fontWeight: "bold",
     },
-    transOptions:{
-        marginTop: 20,
-        flexDirection: "row",
-        justifyContent: "space-evenly",
-    },
-    expense:{
-        color: 'white',
-        backgroundColor: Theme.colors.redAltYellow,
-        borderWidth: 2,
-        borderColor: Theme.colors.purple700,
-        width: 150,
-        height: 40,
-        textAlign: 'center',
-    },
-    income:{
-        color: 'white',
-        backgroundColor: Theme.colors.greenAltYellow,
-        borderWidth: 2,
-        borderColor: Theme.colors.purple700,
-        width: 150,
-        height: 40,
-        textAlign: 'center',
-    },
+    // transOptions:{
+    //     marginTop: 20,
+    //     flexDirection: "row",
+    //     justifyContent: "space-evenly",
+    // },
+    // expense:{
+    //     color: 'white',
+    //     backgroundColor: Theme.colors.redAltYellow,
+    //     borderWidth: 2,
+    //     borderColor: Theme.colors.purple700,
+    //     width: 150,
+    //     height: 40,
+    //     textAlign: 'center',
+    // },
+    // income:{
+    //     color: 'white',
+    //     backgroundColor: Theme.colors.greenAltYellow,
+    //     borderWidth: 2,
+    //     borderColor: Theme.colors.purple700,
+    //     width: 150,
+    //     height: 40,
+    //     textAlign: 'center',
+    // },
     historyBlock:{
         marginVertical:10,
     },
